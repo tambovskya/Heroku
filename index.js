@@ -1,12 +1,8 @@
-var express = require("express");
-var app = express();
-var server = require("http").createServer(app);
-var io = require("socket.io")(server);
+const express = require("express");
+const app = express();
 
-connections = [];
-
-server.listen(process.env.PORT || 3000);
-
-app.post("/", function(req, res) {
-	res.send("ok");
+app.get("/", function(req, res) {
+	rese.send("Working!");
 });
+
+app.listen(process.env.PORT || 5000);
