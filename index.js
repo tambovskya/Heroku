@@ -1,15 +1,6 @@
-const express = require("express");
-const socket = require("socket.io");
+var express = require('express'),
+    app = express(),
+    server = require('http').createServer(app),
+    io = require('socket.io').listen(server),
 
-const PORT = 5000;
-const app = express();
-
-const server = app.listen(PORT, function() {
-	console.log("Hello Good Friend!");
-});
-
-const io = socket(server);
-
-io.on("connection", function (socket) {
-  console.log("Made socket connection");
-});
+server.listen(process.env.PORT || 3000);
