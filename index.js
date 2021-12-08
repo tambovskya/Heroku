@@ -7,6 +7,6 @@ connections = [];
 
 server.listen(process.env.PORT || 3000);
 
-app.get('/', function(req, res) {
-  res.send('ok');
+app.post("/", function(req, res) {
+	res.send("ok");
 });
